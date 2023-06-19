@@ -1,7 +1,7 @@
-FROM tomcat:8.0-alpine
+FROM tomcat:9
 LABEL maintainer="jjjesss@gmail.com"
 
-ADD my-app/target/my-app-1.0-SNAP /usr/local/tomcat/webapps/
+ADD ./target/hello-world-devops.war /usr/local/tomcat/webapps/
 
-EXPOSE 8080
+EXPOSE 9080
 CMD ["catalina.sh", "run"]
